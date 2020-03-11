@@ -8,9 +8,10 @@
 
 import UIKit
 
-class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter {
+class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, ShareProtocol {
 
     private let tableView = UIFactory.TableView.tableView()
+    private let reloadButton = UIFactory.button(title: "Reload content")
     private let viewModel = ViewModel()
     let activityIndicator: ActivityView = ActivityView()
     
@@ -21,6 +22,7 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter {
             switch result {
             case .success(_):
                 self.tableView.reloadData()
+                self.reloadButton.isHidden = true
             case .failure(let error):
                 self.showAlert(message: error)
             }
@@ -34,13 +36,22 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter {
         tableView.delegate = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseIdentifier)
     }
+    
+    func setupButton(completion: @escaping () -> Void) {
+        view.addSubview(reloadButton)
+        reloadButton.anchorSize(to: self.view, multiplierWidth: 0.4, multiplierHeight: 0.1)
+        reloadButton.centering(to: self.view)
+        reloadButton.addAction(for: .touchUpInside) {
+            completion()
+        }
+    }
 
 }
 
 extension BaseView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        openLink(string: viewModel.articleList[indexPath.row].url)
     }
 }
 

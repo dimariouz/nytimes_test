@@ -23,10 +23,11 @@ protocol NetworkServiceProtocol: class {
 class NetworkService: NetworkServiceProtocol {
     
     func getArticles(url: String, completion: @escaping (ArticlesList) -> Void) {
-        
         let parameters: Parameters = ["api-key": Constants.Api.apiKey]
-        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
-            
+       
+        Alamofire.request(url, method: .get,
+                          parameters: parameters,
+                          encoding: URLEncoding.default).responseJSON { response in
             switch response.result {
             case .success:
                 do {

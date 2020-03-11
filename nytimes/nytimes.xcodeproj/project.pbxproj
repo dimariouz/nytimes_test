@@ -21,6 +21,8 @@
 		A72CC7C624197D0F0057B2E7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C524197D0F0057B2E7 /* TableViewCell.swift */; };
 		A72CC7C8241981680057B2E7 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C7241981680057B2E7 /* AlertPresenter.swift */; };
 		A72CC7CA2419821C0057B2E7 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C92419821C0057B2E7 /* ActivityView.swift */; };
+		A72CC7D0241985980057B2E7 /* SharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7CF241985980057B2E7 /* SharePresenter.swift */; };
+		A72CC7D224198DA90057B2E7 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7D124198DA90057B2E7 /* UIControl.swift */; };
 		A75C093424193DE800C85B54 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093324193DE800C85B54 /* Model.swift */; };
 		A75C093A24193EA900C85B54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093924193EA900C85B54 /* Constants.swift */; };
 		A75C093C2419418000C85B54 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093B2419418000C85B54 /* NetworkService.swift */; };
@@ -46,6 +48,8 @@
 		A72CC7C524197D0F0057B2E7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A72CC7C7241981680057B2E7 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		A72CC7C92419821C0057B2E7 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		A72CC7CF241985980057B2E7 /* SharePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePresenter.swift; sourceTree = "<group>"; };
+		A72CC7D124198DA90057B2E7 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		A75C093324193DE800C85B54 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A75C093924193EA900C85B54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A75C093B2419418000C85B54 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				A72CC7B424194E960057B2E7 /* UITabbarController.swift */,
+				A72CC7D124198DA90057B2E7 /* UIControl.swift */,
 				A72CC7BD241973960057B2E7 /* UIVew.swift */,
 			);
 			path = Extensions;
@@ -135,6 +140,7 @@
 				A72CC7BF241974330057B2E7 /* UIFactory.swift */,
 				A72CC7C7241981680057B2E7 /* AlertPresenter.swift */,
 				A72CC7C92419821C0057B2E7 /* ActivityView.swift */,
+				A72CC7CF241985980057B2E7 /* SharePresenter.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -320,12 +326,14 @@
 			files = (
 				A72CC7C624197D0F0057B2E7 /* TableViewCell.swift in Sources */,
 				A72CC7B724194EEA0057B2E7 /* FavoritesView.swift in Sources */,
+				A72CC7D224198DA90057B2E7 /* UIControl.swift in Sources */,
 				A7B7C7902419369500586917 /* AppDelegate.swift in Sources */,
 				A72CC7B224194E790057B2E7 /* TabBarController.swift in Sources */,
 				A75C093424193DE800C85B54 /* Model.swift in Sources */,
 				A72CC7AE24194E3F0057B2E7 /* MostSharedView.swift in Sources */,
 				A72CC7AC24194E2E0057B2E7 /* MostEmailedView.swift in Sources */,
 				A75C093C2419418000C85B54 /* NetworkService.swift in Sources */,
+				A72CC7D0241985980057B2E7 /* SharePresenter.swift in Sources */,
 				A72CC7B524194E960057B2E7 /* UITabbarController.swift in Sources */,
 				A72CC7C2241975080057B2E7 /* ViewModel.swift in Sources */,
 				A72CC7C0241974330057B2E7 /* UIFactory.swift in Sources */,

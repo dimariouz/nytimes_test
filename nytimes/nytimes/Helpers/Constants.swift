@@ -37,6 +37,7 @@ struct Constants {
         static let tableCellHeight: CGFloat = 100
         static let deviceWidth = UIScreen.main.bounds.width
         static let deviceHeight = UIScreen.main.bounds.height
+        static let opaque: CGFloat = 1
     }
 
 }

@@ -19,6 +19,9 @@ class MostViewedView: BaseView {
     private func setupView() {
         setupTableView()
         downloadArticles(type: ArticleType.mostViewed(days: 30))
+        setupButton() {
+            self.downloadArticles(type: ArticleType.mostViewed(days: 30))
+        }
     }
 
 }

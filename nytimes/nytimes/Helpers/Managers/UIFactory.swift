@@ -10,6 +10,18 @@ import UIKit
 
 struct UIFactory {
     
+    static func button(title: String = "Button",
+                       alpha: CGFloat = Constants.Dimensions.opaque,
+                       backgroundColor: UIColor = .white) -> UIButton {
+        let view = UIButton()
+        view.alpha = alpha
+        view.backgroundColor = backgroundColor
+        view.setTitleColor(.black, for: .normal)
+        view.setTitle(title, for: .normal)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }
+    
     struct TableView {
         static func tableView() -> UITableView {
             let view = UITableView()

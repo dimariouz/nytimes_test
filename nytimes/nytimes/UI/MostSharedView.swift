@@ -19,6 +19,9 @@ class MostSharedView: BaseView {
     private func setupView() {
         setupTableView()
         downloadArticles(type: ArticleType.mostShared(days: 30))
+        setupButton() {
+            self.downloadArticles(type: ArticleType.mostShared(days: 30))
+        }
     }
 
 }

@@ -25,13 +25,17 @@ class TableViewCell: UITableViewCell {
         label.text = text
     }
     
+    private func configureCell() {
+        selectionStyle = .none
+        addSubview(label)
+        label.fillSuperview()
+    }
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        addSubview(label)
-        label.fillSuperview()
-        
+        configureCell()
     }
     
     required init?(coder aDecoder: NSCoder) {
