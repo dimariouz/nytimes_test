@@ -14,6 +14,13 @@
 		A72CC7B224194E790057B2E7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7B124194E790057B2E7 /* TabBarController.swift */; };
 		A72CC7B524194E960057B2E7 /* UITabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7B424194E960057B2E7 /* UITabbarController.swift */; };
 		A72CC7B724194EEA0057B2E7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7B624194EEA0057B2E7 /* FavoritesView.swift */; };
+		A72CC7BE241973960057B2E7 /* UIVew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7BD241973960057B2E7 /* UIVew.swift */; };
+		A72CC7C0241974330057B2E7 /* UIFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7BF241974330057B2E7 /* UIFactory.swift */; };
+		A72CC7C2241975080057B2E7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C1241975080057B2E7 /* ViewModel.swift */; };
+		A72CC7C4241978240057B2E7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C3241978240057B2E7 /* BaseView.swift */; };
+		A72CC7C624197D0F0057B2E7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C524197D0F0057B2E7 /* TableViewCell.swift */; };
+		A72CC7C8241981680057B2E7 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C7241981680057B2E7 /* AlertPresenter.swift */; };
+		A72CC7CA2419821C0057B2E7 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C92419821C0057B2E7 /* ActivityView.swift */; };
 		A75C093424193DE800C85B54 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093324193DE800C85B54 /* Model.swift */; };
 		A75C093A24193EA900C85B54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093924193EA900C85B54 /* Constants.swift */; };
 		A75C093C2419418000C85B54 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093B2419418000C85B54 /* NetworkService.swift */; };
@@ -32,6 +39,13 @@
 		A72CC7B124194E790057B2E7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A72CC7B424194E960057B2E7 /* UITabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabbarController.swift; sourceTree = "<group>"; };
 		A72CC7B624194EEA0057B2E7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		A72CC7BD241973960057B2E7 /* UIVew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVew.swift; sourceTree = "<group>"; };
+		A72CC7BF241974330057B2E7 /* UIFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFactory.swift; sourceTree = "<group>"; };
+		A72CC7C1241975080057B2E7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A72CC7C3241978240057B2E7 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A72CC7C524197D0F0057B2E7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A72CC7C7241981680057B2E7 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		A72CC7C92419821C0057B2E7 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		A75C093324193DE800C85B54 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A75C093924193EA900C85B54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A75C093B2419418000C85B54 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -68,13 +82,31 @@
 			isa = PBXGroup;
 			children = (
 				A72CC7B424194E960057B2E7 /* UITabbarController.swift */,
+				A72CC7BD241973960057B2E7 /* UIVew.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A72CC7CB241983C50057B2E7 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A72CC7C524197D0F0057B2E7 /* TableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A72CC7CC241983DF0057B2E7 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				A72CC7C3241978240057B2E7 /* BaseView.swift */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 		A75C093524193E6100C85B54 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A72CC7C1241975080057B2E7 /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -100,11 +132,14 @@
 		A75C093824193E9700C85B54 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A72CC7BF241974330057B2E7 /* UIFactory.swift */,
+				A72CC7C7241981680057B2E7 /* AlertPresenter.swift */,
+				A72CC7C92419821C0057B2E7 /* ActivityView.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A75C093D2419449800C85B54 /* Controllers */ = {
+		A75C093D2419449800C85B54 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				A72CC7B124194E790057B2E7 /* TabBarController.swift */,
@@ -112,8 +147,10 @@
 				A72CC7AD24194E3F0057B2E7 /* MostSharedView.swift */,
 				A72CC7AF24194E4C0057B2E7 /* MostViewedView.swift */,
 				A72CC7B624194EEA0057B2E7 /* FavoritesView.swift */,
+				A72CC7CC241983DF0057B2E7 /* BaseView */,
+				A72CC7CB241983C50057B2E7 /* TableViewCell */,
 			);
-			path = Controllers;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		A7B7C7832419369500586917 = {
@@ -140,7 +177,7 @@
 				A7B7C78F2419369500586917 /* AppDelegate.swift */,
 				A7B7C7A124193BB600586917 /* Model */,
 				A75C093524193E6100C85B54 /* ViewModel */,
-				A75C093D2419449800C85B54 /* Controllers */,
+				A75C093D2419449800C85B54 /* UI */,
 				A75C093624193E7100C85B54 /* NetworkService */,
 				A75C093724193E8800C85B54 /* Helpers */,
 				A7B7C7962419369800586917 /* Assets.xcassets */,
@@ -281,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72CC7C624197D0F0057B2E7 /* TableViewCell.swift in Sources */,
 				A72CC7B724194EEA0057B2E7 /* FavoritesView.swift in Sources */,
 				A7B7C7902419369500586917 /* AppDelegate.swift in Sources */,
 				A72CC7B224194E790057B2E7 /* TabBarController.swift in Sources */,
@@ -289,7 +327,13 @@
 				A72CC7AC24194E2E0057B2E7 /* MostEmailedView.swift in Sources */,
 				A75C093C2419418000C85B54 /* NetworkService.swift in Sources */,
 				A72CC7B524194E960057B2E7 /* UITabbarController.swift in Sources */,
+				A72CC7C2241975080057B2E7 /* ViewModel.swift in Sources */,
+				A72CC7C0241974330057B2E7 /* UIFactory.swift in Sources */,
 				A75C093A24193EA900C85B54 /* Constants.swift in Sources */,
+				A72CC7CA2419821C0057B2E7 /* ActivityView.swift in Sources */,
+				A72CC7C4241978240057B2E7 /* BaseView.swift in Sources */,
+				A72CC7BE241973960057B2E7 /* UIVew.swift in Sources */,
+				A72CC7C8241981680057B2E7 /* AlertPresenter.swift in Sources */,
 				A72CC7B024194E4C0057B2E7 /* MostViewedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

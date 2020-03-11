@@ -14,11 +14,11 @@ extension UITabBarController {
                           selectedImage: UIImage,
                           unselectedImage: UIImage,
                           title: String) -> UINavigationController {
-        let viewController = viewController
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem.selectedImage = selectedImage
         navigationController.tabBarItem.image = unselectedImage
         navigationController.tabBarItem.title = title
+        viewController.title = title
         return navigationController
     }
 }

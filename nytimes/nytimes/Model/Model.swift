@@ -10,10 +10,10 @@ import UIKit
 import RealmSwift
 
 struct Items: Codable {
-    let results: [ListOfArticles]
+    let results: [Article]
 }
 
-struct ListOfArticles: Codable {
+struct Article: Codable {
     let url: String
     let title: String
 }
