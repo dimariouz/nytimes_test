@@ -29,6 +29,12 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, Sh
         }
     }
     
+    func readDataBase() {
+        viewModel.readFavorites {
+            self.tableView.reloadData()
+        }
+    }
+    
     func setupTableView() {
         view.addSubview(tableView)
         tableView.fillSuperview()

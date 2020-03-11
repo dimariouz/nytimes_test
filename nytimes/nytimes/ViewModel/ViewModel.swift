@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewModel {
     
     private let networkService: NetworkServiceProtocol = NetworkService()
+    private let storageService: StorageServiceProtocol = StorageService()
     
     private var items: Items?
+    private var favorites: Results<Favorites>?
     
     var articleList: [Article] {
         return items?.results ?? []
+    }
+    
+    var favoritesList: [Favorites] {
+        return favorites?.toArray() ?? []
     }
     
     func getArticles(type: ArticleType,
@@ -28,6 +35,17 @@ class ViewModel {
             case .failure(let error):
                 completion(.failure(error))
             }
+        }
+    }
+    
+    func addToFavorite(article: Article) {
+        storageService.addToFavotite(article: article)
+    }
+    
+    func readFavorites(completion: @escaping () -> Void) {
+        storageService.readFavorites { favorites in
+            self.favorites = favorites
+            completion()
         }
     }
     

@@ -23,6 +23,8 @@
 		A72CC7CA2419821C0057B2E7 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7C92419821C0057B2E7 /* ActivityView.swift */; };
 		A72CC7D0241985980057B2E7 /* SharePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7CF241985980057B2E7 /* SharePresenter.swift */; };
 		A72CC7D224198DA90057B2E7 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7D124198DA90057B2E7 /* UIControl.swift */; };
+		A72CC7D524198FC00057B2E7 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7D424198FC00057B2E7 /* StorageService.swift */; };
+		A72CC7D7241994480057B2E7 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7D6241994480057B2E7 /* Results.swift */; };
 		A75C093424193DE800C85B54 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093324193DE800C85B54 /* Model.swift */; };
 		A75C093A24193EA900C85B54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093924193EA900C85B54 /* Constants.swift */; };
 		A75C093C2419418000C85B54 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093B2419418000C85B54 /* NetworkService.swift */; };
@@ -50,6 +52,8 @@
 		A72CC7C92419821C0057B2E7 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		A72CC7CF241985980057B2E7 /* SharePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePresenter.swift; sourceTree = "<group>"; };
 		A72CC7D124198DA90057B2E7 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
+		A72CC7D424198FC00057B2E7 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		A72CC7D6241994480057B2E7 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		A75C093324193DE800C85B54 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A75C093924193EA900C85B54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A75C093B2419418000C85B54 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 				A72CC7B424194E960057B2E7 /* UITabbarController.swift */,
 				A72CC7D124198DA90057B2E7 /* UIControl.swift */,
 				A72CC7BD241973960057B2E7 /* UIVew.swift */,
+				A72CC7D6241994480057B2E7 /* Results.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -106,6 +111,14 @@
 				A72CC7C3241978240057B2E7 /* BaseView.swift */,
 			);
 			path = BaseView;
+			sourceTree = "<group>";
+		};
+		A72CC7D324198FA70057B2E7 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				A72CC7D424198FC00057B2E7 /* StorageService.swift */,
+			);
+			path = StorageService;
 			sourceTree = "<group>";
 		};
 		A75C093524193E6100C85B54 /* ViewModel */ = {
@@ -185,6 +198,7 @@
 				A75C093524193E6100C85B54 /* ViewModel */,
 				A75C093D2419449800C85B54 /* UI */,
 				A75C093624193E7100C85B54 /* NetworkService */,
+				A72CC7D324198FA70057B2E7 /* StorageService */,
 				A75C093724193E8800C85B54 /* Helpers */,
 				A7B7C7962419369800586917 /* Assets.xcassets */,
 				A7B7C7982419369800586917 /* LaunchScreen.storyboard */,
@@ -327,8 +341,10 @@
 				A72CC7C624197D0F0057B2E7 /* TableViewCell.swift in Sources */,
 				A72CC7B724194EEA0057B2E7 /* FavoritesView.swift in Sources */,
 				A72CC7D224198DA90057B2E7 /* UIControl.swift in Sources */,
+				A72CC7D7241994480057B2E7 /* Results.swift in Sources */,
 				A7B7C7902419369500586917 /* AppDelegate.swift in Sources */,
 				A72CC7B224194E790057B2E7 /* TabBarController.swift in Sources */,
+				A72CC7D524198FC00057B2E7 /* StorageService.swift in Sources */,
 				A75C093424193DE800C85B54 /* Model.swift in Sources */,
 				A72CC7AE24194E3F0057B2E7 /* MostSharedView.swift in Sources */,
 				A72CC7AC24194E2E0057B2E7 /* MostEmailedView.swift in Sources */,
