@@ -22,9 +22,9 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, Sh
             switch result {
             case .success(_):
                 self.tableView.reloadData()
-                self.reloadButton.isHidden = true
             case .failure(let error):
                 self.showAlert(message: error)
+                self.reloadButton.isHidden = false
             }
         }
     }
@@ -69,7 +69,7 @@ extension BaseView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier) as? TableViewCell else { return UITableViewCell() }
-        cell.setupCell(text: viewModel.articleList[indexPath.row].title)
+        cell.setupCell(model: .article(viewModel.articleList[indexPath.row]))
         return cell
     }
     

@@ -18,6 +18,7 @@ struct UIFactory {
         view.backgroundColor = backgroundColor
         view.setTitleColor(.black, for: .normal)
         view.setTitle(title, for: .normal)
+        view.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }

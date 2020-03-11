@@ -33,7 +33,7 @@ extension FavoritesView {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier) as? TableViewCell else { return UITableViewCell() }
-        cell.setupCell(text: viewModel.favoritesList[indexPath.row].title)
+        cell.setupCell(model: .favorites(viewModel.favoritesList[indexPath.row]))
         return cell
     }
 

@@ -8,29 +8,55 @@
 
 import UIKit
 
+enum TableViewCellDataType {
+    case article(_ data: Article)
+    case favorites(_ data: Favorites)
+}
+
+
 class TableViewCell: UITableViewCell {
     
-    private let label: UILabel = {
+    var favoriteAction: (() -> Void)?
+    
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 2
         label.minimumScaleFactor = 0.5
-        label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label.textColor = .black
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    func setupCell(text: String) {
-        label.text = text
+    private let button: UIButton = {
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        button.setImage(UIImage(named: "star-fav"), for: .normal)
+        button.contentMode = .scaleAspectFit
+        return button
+    }()
+    
+    func setupCell(model: TableViewCellDataType) {
+        switch model {
+        case .article(let article):
+            titleLabel.text = article.title
+        case .favorites(let fav):
+            titleLabel.text = fav.title
+        }
+        
     }
     
     private func configureCell() {
+        accessoryView = button as UIView
         selectionStyle = .none
-        addSubview(label)
-        label.fillSuperview()
+        addSubview(titleLabel)
+        titleLabel.fillSuperview(padding: UIEdgeInsets(top: 5, left: 15,
+                                                       bottom: 5, right: 50))
+        button.addAction(for: .touchUpInside) {
+            self.favoriteAction?()
+        }
     }
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -41,6 +67,5 @@ class TableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 
 }
