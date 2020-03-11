@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A72CC7AA241949680057B2E7 /* Pods_nytimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72CC7A9241949680057B2E7 /* Pods_nytimes.framework */; };
+		A72CC7AC24194E2E0057B2E7 /* MostEmailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7AB24194E2E0057B2E7 /* MostEmailedView.swift */; };
+		A72CC7AE24194E3F0057B2E7 /* MostSharedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7AD24194E3F0057B2E7 /* MostSharedView.swift */; };
+		A72CC7B024194E4C0057B2E7 /* MostViewedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7AF24194E4C0057B2E7 /* MostViewedView.swift */; };
+		A72CC7B224194E790057B2E7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7B124194E790057B2E7 /* TabBarController.swift */; };
+		A72CC7B524194E960057B2E7 /* UITabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7B424194E960057B2E7 /* UITabbarController.swift */; };
+		A72CC7B724194EEA0057B2E7 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CC7B624194EEA0057B2E7 /* FavoritesView.swift */; };
 		A75C093424193DE800C85B54 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093324193DE800C85B54 /* Model.swift */; };
 		A75C093A24193EA900C85B54 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093924193EA900C85B54 /* Constants.swift */; };
 		A75C093C2419418000C85B54 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C093B2419418000C85B54 /* NetworkService.swift */; };
@@ -20,6 +26,12 @@
 		1A888EFC2F892A865C26FF5D /* Pods-nytimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nytimes.release.xcconfig"; path = "Target Support Files/Pods-nytimes/Pods-nytimes.release.xcconfig"; sourceTree = "<group>"; };
 		61689DE212037409D1C4CDB1 /* Pods-nytimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nytimes.debug.xcconfig"; path = "Target Support Files/Pods-nytimes/Pods-nytimes.debug.xcconfig"; sourceTree = "<group>"; };
 		A72CC7A9241949680057B2E7 /* Pods_nytimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_nytimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72CC7AB24194E2E0057B2E7 /* MostEmailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostEmailedView.swift; sourceTree = "<group>"; };
+		A72CC7AD24194E3F0057B2E7 /* MostSharedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostSharedView.swift; sourceTree = "<group>"; };
+		A72CC7AF24194E4C0057B2E7 /* MostViewedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedView.swift; sourceTree = "<group>"; };
+		A72CC7B124194E790057B2E7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A72CC7B424194E960057B2E7 /* UITabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabbarController.swift; sourceTree = "<group>"; };
+		A72CC7B624194EEA0057B2E7 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A75C093324193DE800C85B54 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A75C093924193EA900C85B54 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A75C093B2419418000C85B54 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -52,6 +64,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A72CC7B324194E840057B2E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A72CC7B424194E960057B2E7 /* UITabbarController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A75C093524193E6100C85B54 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A75C093924193EA900C85B54 /* Constants.swift */,
+				A72CC7B324194E840057B2E7 /* Extensions */,
 				A75C093824193E9700C85B54 /* Managers */,
 			);
 			path = Helpers;
@@ -86,6 +107,11 @@
 		A75C093D2419449800C85B54 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A72CC7B124194E790057B2E7 /* TabBarController.swift */,
+				A72CC7AB24194E2E0057B2E7 /* MostEmailedView.swift */,
+				A72CC7AD24194E3F0057B2E7 /* MostSharedView.swift */,
+				A72CC7AF24194E4C0057B2E7 /* MostViewedView.swift */,
+				A72CC7B624194EEA0057B2E7 /* FavoritesView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,10 +281,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72CC7B724194EEA0057B2E7 /* FavoritesView.swift in Sources */,
 				A7B7C7902419369500586917 /* AppDelegate.swift in Sources */,
+				A72CC7B224194E790057B2E7 /* TabBarController.swift in Sources */,
 				A75C093424193DE800C85B54 /* Model.swift in Sources */,
+				A72CC7AE24194E3F0057B2E7 /* MostSharedView.swift in Sources */,
+				A72CC7AC24194E2E0057B2E7 /* MostEmailedView.swift in Sources */,
 				A75C093C2419418000C85B54 /* NetworkService.swift in Sources */,
+				A72CC7B524194E960057B2E7 /* UITabbarController.swift in Sources */,
 				A75C093A24193EA900C85B54 /* Constants.swift in Sources */,
+				A72CC7B024194E4C0057B2E7 /* MostViewedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
