@@ -24,4 +24,3 @@ class Favorites: Object {
 
     override static func primaryKey() -> String? { return "title" }
 }
-

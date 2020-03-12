@@ -9,10 +9,11 @@
 import UIKit
 
 class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, ShareProtocol {
-
+    
     private let tableView = UIFactory.TableView.tableView()
     private let infoLabel = UIFactory.label(text: "No favorites", backgroundColor: .white)
     private let reloadButton = UIFactory.button(title: "Reload content")
+    
     let viewModel = ViewModel()
     let activityIndicator: ActivityView = ActivityView()
     
@@ -43,7 +44,8 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, Sh
         tableView.fillSuperview()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.reuseIdentifier)
+        tableView.register(TableViewCell.self,
+                           forCellReuseIdentifier: TableViewCell.reuseIdentifier)
     }
     
     func setupButton(completion: @escaping () -> Void) {
@@ -60,7 +62,7 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, Sh
         infoLabel.anchorSize(to: self.view, multiplierWidth: 0.4, multiplierHeight: 0.1)
         infoLabel.centering(to: self.view)
     }
-
+    
 }
 
 extension BaseView: UITableViewDelegate {

@@ -56,4 +56,5 @@ struct UIFactory {
             return view
         }
     }
+    
 }

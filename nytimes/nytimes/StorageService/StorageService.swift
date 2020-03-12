@@ -34,7 +34,6 @@ class StorageService: StorageServiceProtocol {
     
     func removeFavotite(article: Favorites) {
         
-        
         if let index = realm?.objects(Favorites.self).firstIndex(of: article),
             let item = realm?.objects(Favorites.self)[index] {
             try? self.realm?.write {

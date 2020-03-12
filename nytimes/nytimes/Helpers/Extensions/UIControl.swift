@@ -30,4 +30,5 @@ extension UIControl {
     func removeActions(for controlEvents: UIControl.Event = .allEvents) {
         removeTarget(nil, action: nil, for: controlEvents)
     }
+    
 }

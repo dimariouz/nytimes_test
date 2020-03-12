@@ -13,7 +13,6 @@ enum TableViewCellDataType {
     case favorites(_ data: Favorites)
 }
 
-
 class TableViewCell: UITableViewCell {
     
     var favoriteAction: (() -> Void)?
