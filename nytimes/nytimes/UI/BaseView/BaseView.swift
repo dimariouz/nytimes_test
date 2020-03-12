@@ -11,8 +11,9 @@ import UIKit
 class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, ShareProtocol {
 
     private let tableView = UIFactory.TableView.tableView()
+    private let infoLabel = UIFactory.label(text: "No favorites", backgroundColor: .white)
     private let reloadButton = UIFactory.button(title: "Reload content")
-    private let viewModel = ViewModel()
+    let viewModel = ViewModel()
     let activityIndicator: ActivityView = ActivityView()
     
     func downloadArticles(type: ArticleType) {
@@ -21,6 +22,7 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, Sh
             self.setActivityIndicator(hidden: true)
             switch result {
             case .success(_):
+                self.reloadButton.isHidden = true
                 self.tableView.reloadData()
             case .failure(let error):
                 self.showAlert(message: error)
@@ -30,7 +32,8 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, Sh
     }
     
     func readDataBase() {
-        viewModel.readFavorites {
+        viewModel.readFavorites { favorites in
+            self.infoLabel.isHidden = !(favorites?.isEmpty ?? true)
             self.tableView.reloadData()
         }
     }
@@ -51,6 +54,12 @@ class BaseView: UIViewController, AlertPresenter, ActivityIndicatorPresenter, Sh
             completion()
         }
     }
+    
+    func setupInfoLabel() {
+        view.addSubview(infoLabel)
+        infoLabel.anchorSize(to: self.view, multiplierWidth: 0.4, multiplierHeight: 0.1)
+        infoLabel.centering(to: self.view)
+    }
 
 }
 
@@ -70,6 +79,9 @@ extension BaseView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier) as? TableViewCell else { return UITableViewCell() }
         cell.setupCell(model: .article(viewModel.articleList[indexPath.row]))
+        cell.favoriteAction = {
+            self.viewModel.addToFavorite(article: self.viewModel.articleList[indexPath.row])
+        }
         return cell
     }
     

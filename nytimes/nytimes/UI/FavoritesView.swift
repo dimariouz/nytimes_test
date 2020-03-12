@@ -10,22 +10,29 @@ import UIKit
 
 class FavoritesView: BaseView {
     
-    private let viewModel = ViewModel()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        readDataBase()
+    }
+    
     private func setupView() {
         setupTableView()
-        readDataBase()
+        setupInfoLabel()
     }
 
 }
 
 extension FavoritesView {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        openLink(string: viewModel.favoritesList[indexPath.row].url)
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.favoritesList.count
@@ -35,6 +42,14 @@ extension FavoritesView {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier) as? TableViewCell else { return UITableViewCell() }
         cell.setupCell(model: .favorites(viewModel.favoritesList[indexPath.row]))
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            viewModel.removeFavorites(article: viewModel.favoritesList[indexPath.row]) {
+                self.readDataBase()
+            }
+        }
     }
 
 }

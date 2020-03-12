@@ -53,12 +53,10 @@ extension ActivityIndicatorPresenter where Self: UIViewController {
             DispatchQueue.main.async {
                 self.activityIndicator.frame = self.view.bounds
                 self.view.addSubview(self.activityIndicator)
-                UIApplication.shared.beginIgnoringInteractionEvents()
             }
         } else {
             DispatchQueue.main.async {
                 self.activityIndicator.removeFromSuperview()
-                UIApplication.shared.endIgnoringInteractionEvents()
             }
         }
     }

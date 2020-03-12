@@ -12,6 +12,7 @@ import RealmSwift
 protocol StorageServiceProtocol: class {
     func addToFavotite(article: Article)
     func readFavorites(completion: @escaping (Results<Favorites>?) -> Void)
+    func removeFavotite(article: Favorites)
 }
 
 class StorageService: StorageServiceProtocol {
@@ -29,6 +30,17 @@ class StorageService: StorageServiceProtocol {
     
     func readFavorites(completion: @escaping (Results<Favorites>?) -> Void) {
         completion(realm?.objects(Favorites.self))
+    }
+    
+    func removeFavotite(article: Favorites) {
+        
+        
+        if let index = realm?.objects(Favorites.self).firstIndex(of: article),
+            let item = realm?.objects(Favorites.self)[index] {
+            try? self.realm?.write {
+                self.realm?.delete(item)
+            }
+        }
     }
     
 }

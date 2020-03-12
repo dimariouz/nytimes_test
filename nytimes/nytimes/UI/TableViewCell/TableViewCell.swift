@@ -43,6 +43,7 @@ class TableViewCell: UITableViewCell {
             titleLabel.text = article.title
         case .favorites(let fav):
             titleLabel.text = fav.title
+            self.button.setImage(UIImage(named: "star"), for: .normal)
         }
         
     }
@@ -54,6 +55,7 @@ class TableViewCell: UITableViewCell {
         titleLabel.fillSuperview(padding: UIEdgeInsets(top: 5, left: 15,
                                                        bottom: 5, right: 50))
         button.addAction(for: .touchUpInside) {
+            self.button.setImage(UIImage(named: "star"), for: .normal)
             self.favoriteAction?()
         }
     }

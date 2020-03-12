@@ -42,11 +42,16 @@ class ViewModel {
         storageService.addToFavotite(article: article)
     }
     
-    func readFavorites(completion: @escaping () -> Void) {
+    func readFavorites(completion: @escaping (Results<Favorites>?) -> Void) {
         storageService.readFavorites { favorites in
             self.favorites = favorites
-            completion()
+            completion(favorites)
         }
+    }
+    
+    func removeFavorites(article: Favorites, completion: @escaping () -> Void) {
+        storageService.removeFavotite(article: article)
+        completion()
     }
     
 }
